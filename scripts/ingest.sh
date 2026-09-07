@@ -85,11 +85,26 @@ if [[ -n "$inbox_file" ]]; then
         title=$(echo "$basename_no_ext" | sed 's/-/ /g' | sed 's/\b\(.\)/\u\1/g')
     fi
 
-    # Read the inbox note body (strip frontmatter if present)
+    # Read the inbox note body and extract existing frontmatter fields
     if head -1 "$inbox_file" | grep -q '^---$'; then
-        body=$(sed '1,/^---$/{ /^---$/!d; }' "$inbox_file" | sed '1d')
+        fm_block=$(sed -n '1,/^---$/{p}' "$inbox_file" | sed '1d;$d')
+        body=$(sed '1,/^---$/d' "$inbox_file" | sed '1{/^---$/d}')
+
+        # Inherit tags from inbox frontmatter if not overridden via CLI
+        if [[ -z "$tags" ]]; then
+            inbox_tags=$(echo "$fm_block" | grep '^tags:' | sed 's/^tags: *//; s/^\[//; s/\]$//; s/"//g')
+            [[ -n "$inbox_tags" ]] && tags="$inbox_tags"
+        fi
+        # Inherit summary if present
+        inbox_summary=$(echo "$fm_block" | grep '^summary:' | sed 's/^summary: *//; s/^"//; s/"$//')
+        # Inherit status if not overridden via CLI and inbox has one
+        inbox_status=$(echo "$fm_block" | grep '^status:' | sed 's/^status: *//; s/^"//; s/"$//')
+        if [[ "$status" == "seeding" ]] && [[ -n "$inbox_status" ]]; then
+            status="$inbox_status"
+        fi
     else
         body=$(cat "$inbox_file")
+        inbox_summary=""
     fi
 fi
 
@@ -118,7 +133,7 @@ today=$(date +%Y-%m-%d)
     echo "lastmod: $today"
     echo "draft: false"
     echo "tags: $tags_yaml"
-    echo "summary: \"\""
+    echo "summary: \"${inbox_summary:-}\""
     echo "status: \"$status\""
     echo "type: \"note\""
     echo "---"
