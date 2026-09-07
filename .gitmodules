@@ -1,0 +1,3 @@
+[submodule "themes/kavu"]
+	path = themes/kavu
+	url = https://github.com/stultus/kavu.git

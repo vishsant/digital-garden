@@ -1,0 +1,56 @@
+baseURL = "https://vishsant.github.io/digital-garden/"
+locale = "en-us"
+title = "vishsant notes"
+theme = "kavu"
+copyright = "Vishnu Santhosh"
+enableRobotsTXT = true
+
+[params]
+  name = "Vishnu Santhosh"
+  description = "A growing collection of notes, ideas, and explorations."
+  initials = "VS"
+  author = "Vishnu Santhosh"
+  authorURL = "https://vishsant.github.io/about/"
+  tagline = "Digital Garden"
+  headerBrandText = "vishsant"
+  headerLogoURL = "https://vishsant.github.io/"
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    style = "monokai"
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[[menus.main]]
+  name = "notes"
+  url = "/digital-garden/"
+  weight = 1
+[[menus.main]]
+  name = "blog"
+  url = "https://vishsant.github.io/post/"
+  weight = 2
+[[menus.main]]
+  name = "projects"
+  url = "https://vishsant.github.io/projects/"
+  weight = 3
+[[menus.main]]
+  name = "now"
+  url = "https://vishsant.github.io/now/"
+  weight = 4
+[[menus.main]]
+  name = "about"
+  url = "https://vishsant.github.io/about/"
+  weight = 5
