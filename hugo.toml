@@ -2,6 +2,7 @@ baseURL = "https://vishsant.github.io/digital-garden/"
 locale = "en-us"
 title = "vishsant notes"
 theme = "kavu"
+contentDir = "digital-garden"
 copyright = "Vishnu Santhosh"
 enableRobotsTXT = true
 
