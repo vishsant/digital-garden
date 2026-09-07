@@ -62,8 +62,8 @@ done
 ok_fm=$((${#notes[@]} - errors))
 [[ $errors -eq 0 ]] && ok "All notes have valid frontmatter"
 
-# ── 2. Dead wikilinks ──
-heading "Wikilinks"
+# ── 2. Dead links ──
+heading "Internal links"
 
 declare -A note_titles
 declare -A note_basenames
@@ -79,12 +79,10 @@ done
 dead_links=0
 for note in "${notes[@]}"; do
     rel="${note#$GARDEN_DIR/}"
-    # Extract wikilinks: [[target]] or [[target|alias]]
+    # Check [[wikilinks]]
     while IFS= read -r link; do
         target=$(echo "$link" | sed 's/|.*//')
-        # Check if target matches a basename or title
         if [[ -z "${note_basenames[$target]:-}" ]] && [[ -z "${note_titles[$target]:-}" ]]; then
-            # Also check kebab-case version of target
             kebab=$(echo "$target" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
             if [[ -z "${note_basenames[$kebab]:-}" ]]; then
                 warn "$rel: dead link [[$link]] → no matching note"
@@ -92,9 +90,17 @@ for note in "${notes[@]}"; do
             fi
         fi
     done < <(grep -oP '\[\[\K[^\]]+' "$note" 2>/dev/null || true)
+    # Check markdown links to /notes/slug/
+    while IFS= read -r slug; do
+        slug=$(echo "$slug" | sed 's|/$||')
+        if [[ -n "$slug" ]] && [[ -z "${note_basenames[$slug]:-}" ]]; then
+            warn "$rel: dead link /notes/$slug/ → no matching note"
+            ((dead_links++)) || true
+        fi
+    done < <(grep -oP '\(/notes/\K[^)]+' "$note" 2>/dev/null || true)
 done
 
-[[ $dead_links -eq 0 ]] && ok "No dead wikilinks"
+[[ $dead_links -eq 0 ]] && ok "No dead internal links"
 
 # ── 3. Orphan notes ──
 heading "Orphans"
@@ -111,7 +117,7 @@ for src in "${notes[@]}" "$GARDEN_DIR/_index.md"; do
     done < <(grep -oP '\[\[\K[^\]]+' "$src" 2>/dev/null || true)
     # Also catch markdown links to /notes/
     while IFS= read -r path; do
-        name=$(echo "$path" | sed 's|.*/||; s|/$||')
+        name=$(echo "$path" | sed 's|/$||; s|.*/||')
         [[ -n "$name" ]] && linked_notes["$name"]=1
     done < <(grep -oP '\(/notes/\K[^)]+' "$src" 2>/dev/null || true)
 done

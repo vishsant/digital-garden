@@ -159,7 +159,8 @@ today=$(date +%Y-%m-%d)
         IFS=',' read -ra link_array <<< "$links"
         for link in "${link_array[@]}"; do
             link=$(echo "$link" | sed 's/^ *//; s/ *$//')
-            echo "- [[$link]]"
+            slug=$(echo "$link" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g; s/--*/-/g; s/^-//; s/-$//')
+            echo "- [$link](/notes/$slug/)"
         done
     fi
 } > "$filepath"

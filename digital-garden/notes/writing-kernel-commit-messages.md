@@ -55,4 +55,4 @@ for receive-path references
 
 - [Describe your changes](https://docs.kernel.org/process/submitting-patches.html#describe-your-changes) — the kernel docs section.
 
-Related: [[Linux Kernel Development]]
+Related: [Linux Kernel Development](/notes/linux-kernel-development/)
