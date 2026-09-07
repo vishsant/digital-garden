@@ -1,0 +1,124 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{/* ── Title ── */}}
+    {{ $tagline := .Site.Params.tagline }}
+    {{ $title := print .Site.Title " | " .Title }}
+    {{ if .IsHome }}
+        {{ if $tagline }}
+            {{ $title = print .Site.Title " — " $tagline }}
+        {{ else }}
+            {{ $title = .Site.Title }}
+        {{ end }}
+    {{ end }}
+    <title>{{ $title }}</title>
+
+    {{/* ── Description ── */}}
+    {{ $desc := .Site.Params.description }}
+    {{ with .Description }}{{ $desc = . }}{{ end }}
+    {{ if and .IsPage (not .Description) }}{{ with .Params.summary }}{{ $desc = . }}{{ else }}{{ with .Summary }}{{ $desc = . | plainify | truncate 160 }}{{ end }}{{ end }}{{ end }}
+    <meta name="description" content="{{ $desc }}">
+
+    {{/* ── Canonical URL ── */}}
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    {{/* ── Robots ── */}}
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+    {{/* ── Author & Keywords ── */}}
+    {{ $author := .Site.Params.author | default .Site.Title }}
+    <meta name="author" content="{{ $author }}">
+    {{ $globalKeywords := .Site.Params.keywords }}
+    {{ $pageTags := .Params.tags }}
+    {{ if $pageTags }}
+        {{ if $globalKeywords }}
+    <meta name="keywords" content="{{ delimit $pageTags ", " }}, {{ delimit $globalKeywords ", " }}">
+        {{ else }}
+    <meta name="keywords" content="{{ delimit $pageTags ", " }}">
+        {{ end }}
+    {{ else if $globalKeywords }}
+    <meta name="keywords" content="{{ delimit $globalKeywords ", " }}">
+    {{ end }}
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+    <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
+    <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+
+    <!-- SEO & Social Metadata -->
+    {{ partial "opengraph.html" . }}
+    {{ partial "twitter_cards.html" . }}
+
+    {{/* ── RSS ── */}}
+    {{ with .OutputFormats.Get "RSS" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+    {{ end }}
+
+    <!-- Enable Google Analytics -->
+    {{ if .Site.Params.googleAnalytics }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.Params.googleAnalytics }}');
+    </script>
+    {{ end }}
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "css/custom.css" | relURL }}">
+
+    {{/* ── JSON-LD: WebSite (homepage) ── */}}
+    {{ if .IsHome }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ $desc }}"
+      {{ with .Site.Params.author }},
+      "author": {
+        "@type": "Person",
+        "name": "{{ . }}"{{ with $.Site.Params.authorURL }},
+        "url": "{{ . }}"{{ end }}
+      }
+      {{ end }}
+    }
+    </script>
+    {{ end }}
+
+    {{/* ── JSON-LD: Article (any non-home page) ── */}}
+    {{ if .IsPage }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      "headline": "{{ .Title }}",
+      "description": "{{ $desc }}"
+      {{ with .Date }},"datePublished": "{{ .Format "2006-01-02T15:04:05Z07:00" }}"{{ end }}
+      {{ with .Lastmod }},"dateModified": "{{ .Format "2006-01-02T15:04:05Z07:00" }}"{{ end }}
+      {{ with $.Site.Params.author }},
+      "author": {
+        "@type": "Person",
+        "name": "{{ . }}"{{ with $.Site.Params.authorURL }},
+        "url": "{{ . }}"{{ end }}
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ . }}"{{ with $.Site.Params.authorURL }},
+        "url": "{{ . }}"{{ end }}
+      }
+      {{ end }}
+      {{ with .Params.tags }},"keywords": [{{ range $i, $t := . }}{{ if $i }}, {{ end }}"{{ $t }}"{{ end }}]{{ end }}
+    }
+    </script>
+    {{ end }}
+
+</head>
