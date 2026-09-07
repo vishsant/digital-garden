@@ -3,6 +3,7 @@ locale = "en-us"
 title = "vishsant notes"
 theme = "kavu"
 contentDir = "digital-garden"
+ignoreFiles = ["inbox"]
 copyright = "Vishnu Santhosh"
 enableRobotsTXT = true
 
