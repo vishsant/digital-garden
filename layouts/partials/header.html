@@ -1,0 +1,15 @@
+{{ $currentURL := .RelPermalink }}
+{{ $brandURL := .Site.Params.headerLogoURL | default .Site.BaseURL }}
+{{ $brandText := .Site.Params.headerBrandText | default .Site.Title }}
+<nav style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border, #333); min-height: 42px;">
+    <a href="{{ $brandURL }}" style="display: inline-flex; align-items: center; gap: 0.5rem; border-bottom: none; text-decoration: none; line-height: 1;">
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 18px; color: var(--text-primary); line-height: 1;">{{ $brandText }}</span>
+    </a>
+    <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; align-items: center;">
+        {{ range .Site.Menus.main }}
+            <li style="margin: 0;">
+                <a href="{{ .URL }}" style="border-bottom: none; font-family: var(--font-body); font-size: 0.9rem; color: var(--text-primary);{{ if hasPrefix $currentURL .URL }} color: var(--accent); font-weight: 700;{{ end }}">{{ .Name }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>
