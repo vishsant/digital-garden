@@ -49,7 +49,7 @@ The group name is the last visible trace of it in a modern Linux system — a fo
 
 ## Practical takeaway
 
-To access serial devices (like [Arduino UNO Q](https://docs.arduino.cc/hardware/uno-q/)) on Arch-based distros (e.g. Omarchy) , you need to be in the uucp group.
+To access serial port of devices (like [Arduino UNO Q](https://docs.arduino.cc/hardware/uno-q/)) on Arch-based distros (e.g. Omarchy) , you need to be in the uucp group.
 
 ```bash
 sudo usermod -aG uucp $USER
