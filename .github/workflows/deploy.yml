@@ -29,6 +29,9 @@ jobs:
           hugo-version: '0.165.0'
           extended: true
 
+      - name: Convert wikilinks
+        run: ./scripts/convert-wikilinks.sh
+
       - name: Build
         run: hugo --minify
 
