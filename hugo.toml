@@ -18,11 +18,14 @@ enableRobotsTXT = true
   headerLogoURL = "https://vishsant.github.io/"
 
 [[params.tagGroups]]
+  name = "AI & Machine Learning"
+  tags = ["ai", "ai-safety", "alignment", "deep-learning", "scaling", "rsi", "monitoring"]
+[[params.tagGroups]]
   name = "Engineering & Systems"
-  tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "toolchain", "embedded", "arm"]
+  tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "toolchain", "embedded", "arm", "platforms", "extensibility", "sandboxing", "security"]
 [[params.tagGroups]]
   name = "Decision & Strategy"
-  tags = ["strategy", "leadership", "decision-making", "framework", "prioritization"]
+  tags = ["strategy", "leadership", "decision-making", "framework", "prioritization", "opportunities", "frameworks"]
 [[params.tagGroups]]
   name = "Mindset & Growth"
   tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication", "stoicism", "self-awareness", "ownership"]
