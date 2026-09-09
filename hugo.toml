@@ -17,6 +17,28 @@ enableRobotsTXT = true
   headerBrandText = "vishsant"
   headerLogoURL = "https://vishsant.github.io/"
 
+[[params.tagGroups]]
+  name = "Engineering & Systems"
+  tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "toolchain", "embedded", "arm"]
+[[params.tagGroups]]
+  name = "Decision & Strategy"
+  tags = ["strategy", "leadership", "decision-making", "framework", "prioritization"]
+[[params.tagGroups]]
+  name = "Mindset & Growth"
+  tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication"]
+[[params.tagGroups]]
+  name = "Research & Craft"
+  tags = ["note-taking", "zettelkasten", "process", "research", "writing"]
+[[params.tagGroups]]
+  name = "Product & Metrics"
+  tags = ["product", "metrics", "measurement", "lean", "marketing"]
+[[params.tagGroups]]
+  name = "Law & Society"
+  tags = ["law", "cybercrime", "rights", "society"]
+[[params.tagGroups]]
+  name = "Stories & Culture"
+  tags = ["storytelling", "history", "etymology", "culture"]
+
 [taxonomies]
   tag = "tags"
 
