@@ -25,7 +25,7 @@ enableRobotsTXT = true
   tags = ["strategy", "leadership", "decision-making", "framework", "prioritization"]
 [[params.tagGroups]]
   name = "Mindset & Growth"
-  tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication", "stoicism", "self-awareness"]
+  tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication", "stoicism", "self-awareness", "ownership"]
 [[params.tagGroups]]
   name = "Research & Craft"
   tags = ["note-taking", "zettelkasten", "process", "research", "writing"]
