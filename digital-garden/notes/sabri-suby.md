@@ -33,10 +33,10 @@ His book on customer acquisition. Core thesis: most businesses fail not because 
 
 Recurring themes across his content:
 
-- **Systems over motivation.** Discipline executed through repeatable systems beats relying on feeling like it. His 8 operating systems for business are instances of two deeper principles: protecting scarce resources (energy and attention) and regenerating them. See [[the-two-resources-behind-every-productivity-system]].
+- **Systems over motivation.** Discipline executed through repeatable systems beats relying on feeling like it. His 8 operating systems for business are instances of two deeper principles: protecting scarce resources (energy and attention) and regenerating them. See [The Two Resources Behind Every Productivity System](/notes/the-two-resources-behind-every-productivity-system/).
 - **Offense before defense.** When you're starting out, revenue-producing activities come first — everything else is secondary.
 - **Deciding once.** Eliminate repeated decisions (same clothes, rotating meals, themed days) so mental energy goes to high-impact work.
 
 ## Related
 
-- [[the-two-resources-behind-every-productivity-system]] — the principles underlying his 8 business systems
+- [The Two Resources Behind Every Productivity System](/notes/the-two-resources-behind-every-productivity-system/) — the principles underlying his 8 business systems

@@ -37,7 +37,7 @@ These two axes create four quadrants:
 
 **Q1 — Urgent & Important:** Genuine crises and real deadlines. Unavoidable, but if you live here you burn out. Most Q1 tasks exist because Q2 was neglected — the car breaks down because you skipped maintenance.
 
-**Q2 — Not Urgent & Important:** The sweet spot. Long-term projects, skill-building, health, planning, relationships. No one demands these today, which is exactly why they get postponed. This is where [[the-two-resources-behind-every-productivity-system]] applies directly: the defense and capacity systems clear Q1 and Q3 noise so that Q2 gets the first protected slot, not the leftover one.
+**Q2 — Not Urgent & Important:** The sweet spot. Long-term projects, skill-building, health, planning, relationships. No one demands these today, which is exactly why they get postponed. This is where [The Two Resources Behind Every Productivity System](/notes/the-two-resources-behind-every-productivity-system/) applies directly: the defense and capacity systems clear Q1 and Q3 noise so that Q2 gets the first protected slot, not the leftover one.
 
 **Q3 — Urgent & Not Important:** Busy work disguised as productivity. Interruptions, most meetings, other people's priorities landing on your desk. Feels productive because it's urgent. Isn't, because it's not yours. Default response: delegate, batch into low-energy hours, or say no.
 
@@ -59,4 +59,4 @@ The mere-urgency effect can be reversed. The same research found that when peopl
 
 ## Related
 
-- [[the-two-resources-behind-every-productivity-system]] — the defense and capacity principles that clear Q1/Q3 so Q2 gets real time
+- [The Two Resources Behind Every Productivity System](/notes/the-two-resources-behind-every-productivity-system/) — the defense and capacity principles that clear Q1/Q3 so Q2 gets real time
