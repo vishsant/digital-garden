@@ -25,10 +25,10 @@ enableRobotsTXT = true
   tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "toolchain", "embedded", "arm", "platforms", "extensibility", "sandboxing", "security"]
 [[params.tagGroups]]
   name = "Decision & Strategy"
-  tags = ["strategy", "leadership", "decision-making", "framework", "prioritization", "opportunities", "frameworks"]
+  tags = ["strategy", "leadership", "decision-making", "framework", "prioritization", "opportunities", "frameworks", "systems-thinking"]
 [[params.tagGroups]]
   name = "Mindset & Growth"
-  tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication", "stoicism", "self-awareness", "ownership"]
+  tags = ["mindset", "personal-growth", "resilience", "philosophy", "communication", "stoicism", "self-awareness", "ownership", "productivity", "energy-management", "decision-fatigue"]
 [[params.tagGroups]]
   name = "Research & Craft"
   tags = ["note-taking", "zettelkasten", "process", "research", "writing"]
