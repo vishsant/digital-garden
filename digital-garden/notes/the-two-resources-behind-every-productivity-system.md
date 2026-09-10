@@ -74,3 +74,7 @@ Productive ≠ important. The important thing gets the *first* protected block, 
 
 Spot a drain → apply defense. Spot an energy gap → apply capacity. Spot avoidance → force the priority question.
 
+## Source
+
+Derived from [[sabri-suby]]'s 8 operating systems for running a business.
+

@@ -40,7 +40,10 @@ enableRobotsTXT = true
   tags = ["law", "cybercrime", "rights", "society"]
 [[params.tagGroups]]
   name = "Stories & Culture"
-  tags = ["storytelling", "history", "etymology", "culture"]
+  tags = ["storytelling", "history", "etymology", "culture", "people"]
+[[params.tagGroups]]
+  name = "Business & Entrepreneurship"
+  tags = ["entrepreneurship"]
 
 [taxonomies]
   tag = "tags"
