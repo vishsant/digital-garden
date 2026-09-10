@@ -64,7 +64,7 @@ Two principles, three shapes each, applied to different areas of life. No list t
 
 These systems clear the runway but never choose what flies. Without an explicit priority hierarchy, you fill protected time with **productive-but-not-important** work — tasks that feel like progress but never touch the hard, scary, truly important thing.
 
-Productive ≠ important. The important thing gets the *first* protected block, not the leftover one. Name it. Write it down. Give it the first slot. Then build the fortress around it.
+Productive ≠ important. The important thing gets the *first* protected block, not the leftover one. Name it. Write it down. Give it the first slot. Then build the fortress around it. [[the-eisenhower-matrix|The Eisenhower Matrix]] is one framework for forcing this distinction — a 2×2 that separates urgent from important before you act.
 
 ## The design framework
 
