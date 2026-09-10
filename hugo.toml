@@ -19,7 +19,7 @@ enableRobotsTXT = true
 
 [[params.tagGroups]]
   name = "AI & Machine Learning"
-  tags = ["ai", "ai-safety", "alignment", "deep-learning", "scaling", "rsi", "monitoring"]
+  tags = ["ai", "ai-agents", "ai-safety", "alignment", "claude-code", "deep-learning", "evaluation", "scaling", "rsi", "monitoring", "skills"]
 [[params.tagGroups]]
   name = "Engineering & Systems"
   tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "toolchain", "embedded", "arm", "platforms", "extensibility", "sandboxing", "security"]
