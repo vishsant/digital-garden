@@ -17,4 +17,6 @@ Working on the Linux kernel daily shapes how I think about systems. A few recurr
 
 Areas I work in: device drivers, IPC, network subsystems.
 
+A practical example is [[UNO Q Custom Kernel Boot Test]].
+
 Related: [Digital Garden](/notes/digital-garden/)
