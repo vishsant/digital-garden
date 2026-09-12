@@ -45,9 +45,7 @@ A productive learning cycle is:
 4. Identify one correction.
 5. Try again.
 
-$$
-\text{attempt} \rightarrow \text{evidence} \rightarrow \text{correction} \rightarrow \text{retry}
-$$
+> **Attempt → evidence → correction → retry**
 
 A mistake becomes useful only when it is specific enough to guide the next reach.
 
@@ -78,5 +76,7 @@ Ask:
 Then ask:
 
 > What would make the next attempt–evidence–correction–retry loop shorter, clearer, more demanding, and easier to return to?
+
+This also requires protected energy and attention; [[The Two Resources Behind Every Productivity System]] describes the capacity and focus that make sustained practice possible.
 
 Improvement is not guaranteed. People differ, domains differ, and access is uneven. But talent is far less mysterious when we treat it as something an ecology can cultivate rather than a magical property an individual either possesses or lacks.

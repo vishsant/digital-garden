@@ -74,6 +74,8 @@ Productive ≠ important. The important thing gets the *first* protected block, 
 
 Spot a drain → apply defense. Spot an energy gap → apply capacity. Spot avoidance → force the priority question.
 
+Once those conditions exist, [[Talent Is an Ecology, Not a Trait]] explains how an environment can turn protected time and energy into better learning loops.
+
 ## Source
 
 Derived from [Sabri Suby](/notes/sabri-suby/)'s 8 operating systems for running a business.
