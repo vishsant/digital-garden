@@ -1,7 +1,7 @@
 ---
 title: "Mastery Is Flexible Reconstruction"
-date: 2026-09-17
-lastmod: 2026-09-17
+date: 2026-09-21
+lastmod: 2026-09-21
 draft: false
 tags: ["learning", "reasoning", "education", "feedback"]
 summary: "You master an idea when you can reconstruct and use it through paths other than the one in which you learned it."
