@@ -3,7 +3,7 @@
 
     {{- /* ── Header ── */ -}}
     <header class="note-header">
-        <a href="{{ "/" | relURL }}" class="note-back">&larr; Notes</a>
+        <a href="{{ .Site.Home.RelPermalink }}" class="note-back">&larr; Notes</a>
         <h1 class="note-title">{{ .Title }}</h1>
 
         {{ with .Params.summary }}
@@ -79,7 +79,7 @@
     {{- /* ── Note Footer ── */ -}}
     <footer class="note-footer">
         <div class="note-footer-nav">
-            <a href="{{ "/" | relURL }}" class="note-footer-link">&larr; All notes</a>
+            <a href="{{ .Site.Home.RelPermalink }}" class="note-footer-link">&larr; All notes</a>
             <button class="note-footer-link" id="note-random" style="background:none;border:none;cursor:pointer;font-family:inherit;font-size:inherit;padding:0;">Random note &rarr;</button>
         </div>
     </footer>
