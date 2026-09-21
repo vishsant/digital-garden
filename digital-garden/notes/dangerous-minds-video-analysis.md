@@ -80,6 +80,6 @@ The central critical-thinking rule is:
 
 ## Related notes
 
-- [[motivated-reasoning-in-ai]]
-- [[feedback-loops]]
-- [[talent-is-an-ecology-not-a-trait]]
+- [[Motivated Reasoning in AI]]
+- [[Feedback Loops]]
+- [[Talent Is an Ecology, Not a Trait]]
