@@ -22,7 +22,7 @@ enableRobotsTXT = true
   tags = ["ai", "ai-agents", "ai-safety", "alignment", "claude-code", "deep-learning", "evaluation", "scaling", "rsi", "monitoring", "skills"]
 [[params.tagGroups]]
   name = "Engineering & Systems"
-  tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "bash", "toolchain", "embedded", "arm", "platforms", "extensibility", "sandboxing", "security"]
+  tags = ["engineering", "software-architecture", "distributed-systems", "infrastructure", "devops", "federation", "protocols", "linux", "kernel", "systems", "bash", "toolchain", "embedded", "arm", "platforms", "extensibility", "sandboxing", "security"]
 [[params.tagGroups]]
   name = "Decision & Strategy"
   tags = ["strategy", "leadership", "decision-making", "framework", "prioritization", "opportunities", "frameworks", "systems-thinking"]
